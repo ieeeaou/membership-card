@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Card Generator</title>
+  <link rel="stylesheet" href="systemstyles.css">
+  <!-- Include QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Input Form -->
+    <div class="input-section">
+      <h1>Create Your Membership Card</h1>
+      <form id="membershipForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="id">Membership ID:</label>
+        <input type="text" id="id" name="id" placeholder="Enter your membership ID" required>
+
+        <label for="dob">Date of Birth (DOB):</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="placeOfBirth">Place of Birth:</label>
+        <input type="text" id="placeOfBirth" name="placeOfBirth" placeholder="Enter your place of birth" required>
+
+        <label for="student">Are you a student?</label>
+        <select id="student" name="student" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" style="background-color: white;" required>
+            <option value="">Select</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="engaged">Engaged</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+            <option value="separated">Separated</option>
+            <option value="civil-partnership">Domestic Partnership</option>
+        </select>
+        
+        <label for="bloodType">Blood Type:</label>
+        <select id="bloodType" name="bloodType" required>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+
+        <button type="submit">Generate Card</button>
+        <button type="button" id="refreshButton" style="background-color: red;">Refresh Form & Card</button>
+      </form>
+    </div>
+
+    <!-- Membership Card Frame -->
+    <div class="card-frame">
+      <div id="membershipCard" class="membership-card">
+        <!-- Front Side -->
+        <div class="card-side front">
+          <h2>IEEE AOU Membership Card</h2>
+          <div class="info-content">
+          <p><strong>Name:</strong> <span id="cardNameFront">-</span></p>
+          <p><strong>ID:</strong> <span id="cardIDFront">-</span></p>
+          <p><strong>Email:</strong> <span id="cardEmailFront">-</span></p>
+          <p><strong>Phone:</strong> <span id="cardPhoneFront">-</span></p>
+          <p><strong>DOB:</strong> <span id="cardDobFront">-</span></p>
+          <p><strong>Place of Birth:</strong> <span id="cardPlaceOfBirthFront">-</span></p>
+          </div>
+        </div>
+
+        <!-- Back Side -->
+        <div class="card-side back">
+          <div class="info-content">
+            <p><strong>Student:</strong> <span id="cardStudentBack">-</span></p>
+            <p><strong>Nationality:</strong> <span id="cardNationalityBack">-</span></p>
+            <p><strong>Address:</strong> <span id="cardAddressBack">-</span></p>
+            <p><strong>Status:</strong> <span id="cardStatusBack">-</span></p>
+            <p><strong>Blood Type:</strong> <span id="cardBloodTypeBack">-</span></p>
+            <p><strong>Expiry Date:</strong> <span id="cardExpiryDateBack">-</span></p>
+          </div>
+          <div id="qrCodeContainer" class="qr-code-container"></div>
+        </div>
+      </div>
+      <button id="downloadButton">Download Card</button>
+    </div>
+  </div>
+
+  <script src="systemscript.js"></script>
+</body>
+</html>
