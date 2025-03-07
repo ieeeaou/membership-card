@@ -70,6 +70,8 @@
           <option value="O-">O-</option>
         </select>
 
+        <button type="submit" style="background-color: blue;">Generate Card</button>
+
       </form>
     </div>
 
@@ -79,13 +81,16 @@
         <!-- Front Side -->
         <div class="card-side front">
           <h2>IEEE AOU Membership Card</h2>
-          <div class="info-content">
-          <p><strong>Name:</strong> <span id="cardNameFront">-</span></p>
-          <p><strong>ID:</strong> <span id="cardIDFront">-</span></p>
-          <p><strong>Email:</strong> <span id="cardEmailFront">-</span></p>
-          <p><strong>Phone:</strong> <span id="cardPhoneFront">-</span></p>
-          <p><strong>DOB:</strong> <span id="cardDobFront">-</span></p>
-          <p><strong>Place of Birth:</strong> <span id="cardPlaceOfBirthFront">-</span></p>
+          <div class="font-card">
+            <div class="info-content">
+              <p><strong>Name:</strong> <span id="cardNameFront">-</span></p>
+              <p><strong>ID:</strong> <span id="cardIDFront">-</span></p>
+              <p><strong>Email:</strong> <span id="cardEmailFront">-</span></p>
+              <p><strong>Phone:</strong> <span id="cardPhoneFront">-</span></p>
+              <p><strong>DOB:</strong> <span id="cardDobFront">-</span></p>
+              <p><strong>Place of Birth:</strong> <span id="cardPlaceOfBirthFront">-</span></p>
+            </div>
+            <div class="img"><img src="images/1.png" alt=" ieee aou logo"></div>
           </div>
         </div>
 
@@ -102,7 +107,6 @@
           <div id="qrCodeContainer" class="qr-code-container"></div>
         </div>
       </div>
-      <button type="submit" style="background-color: blue;">Generate Card</button>
       <button type="button" id="refreshButton" style="background-color: red;">Refresh F&C</button>
       <button id="downloadButton">Download Card</button>
     </div>
