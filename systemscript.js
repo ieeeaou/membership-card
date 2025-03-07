@@ -110,15 +110,6 @@ window.addEventListener('beforeunload', function() {
   sessionStorage.removeItem('loggedIn');
 });
 
-// Back button to clear session and go back
-const backButton = document.createElement('button');
-backButton.textContent = 'Back to Login';
-backButton.onclick = function() {
-  sessionStorage.removeItem('loggedIn');
-  window.location.href = 'index.html';
-};
-document.body.appendChild(backButton);
-
 
 document.getElementById('refreshButton').addEventListener('click', function() {
   // Clear the form

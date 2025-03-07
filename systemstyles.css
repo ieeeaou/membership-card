@@ -50,20 +50,6 @@
     font-size: 16px;
   }
   
-  .input-section button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .input-section button:hover {
-    background: #0056b3;
-  }
-  
   .card-frame {
     position: fixed;
     right: 5vh;
@@ -133,17 +119,13 @@
     align-items: center; 
   }
   
-  #downloadButton {
+  Button {
     background: #28a745;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 15px;
-  }
-  
-  #downloadButton:hover {
-    background: #218838;
   }
